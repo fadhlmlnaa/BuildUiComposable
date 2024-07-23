@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BuildUiComposable</string>
+    <string name="fullName_info_card">Fadhil Maulana Syhafiq</string>
+    <string name="title_info_card">IT Developer</string>
+    <string name="phone_info_card">+62 852 8035 7817</string>
+    <string name="email_info_card">fadhlmlnaa@gmail.com</string>
+    <string name="social_info_card">\@fadhlmlnaa</string>
+</resources>
