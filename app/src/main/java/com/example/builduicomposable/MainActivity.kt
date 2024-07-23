@@ -1,6 +1,5 @@
 package com.example.builduicomposable
 
-import android.media.Image
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -10,12 +9,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,7 +21,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -57,9 +52,9 @@ fun CardBusiness() {
         CardInfoUser(
             fullName = stringResource(R.string.fullName_info_card),
             title = stringResource(R.string.title_info_card),
-            phone_number = stringResource(R.string.phone_info_card),
+            phoneNumber = stringResource(R.string.phone_info_card),
             email = stringResource(R.string.email_info_card),
-            social_media = stringResource(R.string.social_info_card),
+            socialMedia = stringResource(R.string.social_info_card),
         )
     }
 }
@@ -68,9 +63,9 @@ fun CardBusiness() {
 private fun CardInfoUser(
     fullName: String,
     title: String,
-    phone_number: String,
+    phoneNumber: String,
     email: String,
-    social_media: String,
+    socialMedia: String,
 ) {
     Column(
         Modifier.fillMaxSize(),
@@ -107,31 +102,37 @@ private fun CardInfoUser(
         Column (
             Modifier.padding(bottom = 28.dp)
         ){
-            Row {
+            Row (
+                Modifier.padding(top = 6.dp)
+            ){
                 Icon(
                     painter = painterResource(R.drawable.phone_16dp_5f6368),
                     contentDescription = null
                 )
                 Text(
-                    text = phone_number,
+                    text = phoneNumber,
                     modifier = Modifier.padding(start = 16.dp),
                     fontFamily = FontFamily.SansSerif,
                     fontWeight = FontWeight.Bold
                 )
             }
-            Row {
+            Row (
+                Modifier.padding(top = 6.dp)
+            ){
                 Icon(
                     painter = painterResource(R.drawable.share_16dp_5f6368),
                     contentDescription = null
                 )
                 Text(
-                    text = social_media,
+                    text = socialMedia,
                     modifier = Modifier.padding(start = 16.dp),
                     fontFamily = FontFamily.SansSerif,
                     fontWeight = FontWeight.Bold
                 )
             }
-            Row {
+            Row (
+                Modifier.padding(top = 6.dp)
+            ){
                 Icon(
                     painter = painterResource(R.drawable.email_16dp_5f6368),
                     contentDescription = null
